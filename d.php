@@ -39,7 +39,7 @@
 		$fileList = glob($dir."/*");
 		foreach ($fileList as $filename) {
 			if(is_file($filename)){
-				echo $filename."\n";
+				echo $filename."\n\n";
 				if ($filename === 'baca_aku_mas.txt') {
 					
 					unlink($dir."/baca_aku_mas.txt");
