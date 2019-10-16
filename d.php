@@ -42,7 +42,7 @@
 				echo $filename."\n\n";
 				if ($filename === 'baca_aku_mas.txt') {
 					
-					unlink($dir."/baca_aku_mas.txt");
+					unlink("baca_aku_mas.txt");
 				}else{
 
 					$info = pathinfo($filename);
