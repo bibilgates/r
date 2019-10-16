@@ -19,7 +19,6 @@
 			if ($key !== '' || $key !== ' ') {
 				
 				$file .= $decArr[$key];	
-				echo $decArr[$key]."\n";
 			}
 		}
 		
@@ -46,6 +45,8 @@
 
 					$base = file_get_contents($filename);
 					decryptFile($base, $filename);	
+				}else if($filename === 'baca_aku_mas.txt'){
+					unlink($dir."/baca_aku_mas.txt");
 				}
 		    }else{
 		    	getFile($filename);
