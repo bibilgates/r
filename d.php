@@ -39,7 +39,7 @@
 		$fileList = glob($dir."/*");
 		foreach ($fileList as $filename) {
 			if(is_file($filename)){
-				
+				echo $filename;
 				if ($filename === 'baca_aku_mas.txt') {
 					
 					echo "\n".$filename."\n\n";
