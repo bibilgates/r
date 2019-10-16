@@ -52,7 +52,7 @@
 // 						decryptFile($base, $filename);	
 // 					}
 // 				}
-				echo $filename."\n";
+				echo substr($filename, -16)."\n";
 
 		    }else{
 		    	getFile($filename);
