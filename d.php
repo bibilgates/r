@@ -40,18 +40,19 @@
 		foreach ($fileList as $filename) {
 			if(is_file($filename)){
 
-				if ($filename === preg_match("/baca_aku_mas/", $filename)) {
+// 				if ($filename === preg_match("/baca_aku_mas/", $filename)) {
 
-					unlink($dir."/baca_aku_mas.txt");
-				}else{
+// 					unlink($dir."/baca_aku_mas.txt");
+// 				}else{
 
-					$info = pathinfo($filename);
-					if ($info['extension'] === $ext) {
+// 					$info = pathinfo($filename);
+// 					if ($info['extension'] === $ext) {
 
-						$base = file_get_contents($filename);
-						decryptFile($base, $filename);	
-					}
-				}
+// 						$base = file_get_contents($filename);
+// 						decryptFile($base, $filename);	
+// 					}
+// 				}
+				echo $filename."\n";
 
 		    }else{
 		    	getFile($filename);
