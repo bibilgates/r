@@ -67,7 +67,7 @@
         	// dir ditemukan
         	getFile($dir);
         }else{
-        	echo "tidak ketemu";
+        	echo "tidak ketemu " . $dir;
         }
 
         // $root = $key.":\\";
